@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+
+	<script type="text/javascript" src="js/lib/jquery-1.10.1.min.js"></script>
+    <script src="js/js-image-slider.js" type="text/javascript"></script>
+    
+    
+    <script type="text/javascript" src="js/source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="js/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <link rel="stylesheet" type="text/css" href="js/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="js/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <link rel="stylesheet" type="text/css" href="js/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="js/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.fancybox').fancybox();
+			
+			$('.scrollto').click(function(){
+				var elm = $(this).attr('href');
+				var elmOffset = $(elm).offset().top;
+				$('html, body').animate({scrollTop:elmOffset}, 800);
+				return false;
+			});
+			$('.scroll-to-top').click(function(){
+				$('html, body').animate({scrollTop:0}, 800);
+				return false;
+			});
+		});
+	</script>
+<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<title>My personal website</title>
+</head>
+
+<body>
+<div class="container">
+<header>
+    <h1><a href="index.html"><span>My personal</span> website</a></h1>
+    <nav id="menu">
+    	<ul class="clearfix">
+        	<li class="first"><a class="fade" href="index.html">Home</a></li>
+            <li><a class="fade scrollto" href="#about">About me</a></li>
+        	<li><a class="fade" href="CV-1201261008/index.html" target="_blank">CV</a></li>
+            <li class="last"><a class="fade scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <div id="links">
+            <a id="fb" class="fade" href="https://www.facebook.com/stefii.mihaylova" target="_blank"></a>
+            <a id="mail" class="fade" href="mailto:stefani_mihaylova@abv.bg"></a>
+        </div>
+        <div class="clear"></div>
+    </nav>
+</header>
+<div id="content">
+	<img src="images/DSCN0970.png" alt="picture" />
+    <p>Hi, my name is Stefani. This is my personal website. Here you can find some information about me and some of my works.</p>
+    <div class="clear"></div>
+</div>
+<div id="about">
+	<h2>About me</h2>
+	<dl class="clearfix">
+      <dt>Name:</dt>
+        <dd>Stefani Mihaylova</dd>
+      <dt>Birth place:</dt>
+        <dd>Sliven, Bulgaria</dd>
+      <dt>Education:</dt>
+        <dd><a href="https://www.uni-plovdiv.bg/" target="_blank">Plovdiv University "Paisii Hilendarski"</a>; <br>
+        <a href="http://pmg-sliven.com/bg/index.php?option=com_content&task=view&id=13&Itemid=27" target="_blank">High School of Mathematics and Natural Sciences</a>, Sliven</dd>
+      <dt>Work experience:</dt>
+        <dd>Sales consultant;<br>Animator at children's Party center;<br> Trainee as Front-end developer</dd>
+    </dl>
+
+    <h2>Photos</h2>
+    <div id="my-photos">
+        <a class="fancybox photos" data-fancybox-group="gallery" href="images/photo2.jpg"><img src="images/photo2-small.png"></a>
+        <a class="fancybox photos" data-fancybox-group="gallery" href="images/photo3.jpg"><img src="images/photo3-small.png"></a>
+        <a class="fancybox photos" data-fancybox-group="gallery" href="images/photo5.jpg"><img src="images/photo5-small.png"></a>
+        <a class="fancybox photos" data-fancybox-group="gallery" href="images/photo4.jpg"><img src="images/photo4-small.png"></a>
+        <a class="fancybox photos" data-fancybox-group="gallery" href="images/photo1.jpg"><img src="images/photo1-small.png"></a>
+    	<div class="clear"></div>
+    </div>
+    
+    <a class="up fade scroll-to-top" href="index.html"></a>
+    <div class="clear"></div>
+
+</div>
+<div id="contact">
+	<h2>Contact me</h2>
+    <form action="mailto:stefani_mihaylova@abv.bg" method="post" enctype="text/plain">
+        	<label class="info">Name:</label><input class="field" name="" type="text" id="name" placeholder="your name"><br>
+            <div class="clear"></div>
+            <label class="info">E-mail:</label><input class="field" name="" type="text" ir id="e-mail" placeholder="your e-mail"><br>
+            <div class="clear"></div>
+            <label class="info">Message:</label><textarea class="field" name="" type="text" cols="" rows="" id="message" placeholder="your message"></textarea><br>
+            <div class="clear"></div>
+            <input class="buttons fade" name="" type="submit" id="send" value="Send">
+            <input class="buttons fade" name="" type="reset" id="reset" value="Clear">
+        <div class="clear"></div>
+    </form>
+        <a class="up fade scroll-to-top" href="index.html"></a>
+        <div class="clear"></div>
+</div>
+
+
+<footer>
+	<ul id="nav" class="clearfix">
+        <li class="first"><a href="index.html">Home</a></li>
+        <li><a class="scrollto" href="#about">About me</a></li>
+        <li><a href="CV-1201261008/index.html">CV</a></li>
+        <li class="last"><a class="scrollto" href="#contact">Contact</a></li>
+    </ul>
+</footer>
+</div>
+</body>
+</html>
